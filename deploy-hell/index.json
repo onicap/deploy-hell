@@ -3,9 +3,14 @@
     "description": "Use a simple 3-tier application to learn about kube, helm and k9s",
     "details": {
         "intro": {
-            "text": "intro.md"
+            "text": "intro.md",
+            "background": "setup.sh"
         },
         "steps" : [
+            {
+                "title": "Install tools",
+                "text":"setup/tools.md"
+            },
             {
                 "title": "Play with kubectl",
                 "text": "setup/kubectl.md"
