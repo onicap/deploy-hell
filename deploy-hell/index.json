@@ -18,6 +18,11 @@
         ],
         "finish": {
             "text": "final/congrats.md"
+        },
+        "assets": {
+            "host01": [
+              {"file": "conf.yaml", "target": "~/app", "chmod": "+w"}
+            ]
         }
     },
     "backend": {
