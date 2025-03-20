@@ -4,18 +4,18 @@
     "details": {
         "intro": {
             "text": "intro.md"
+        },
+        "steps" : [
+            {
+                "title": "Play with kubectl",
+                "text": "setup/kubectl.md"
+            }
+        ],
+        "finish": {
+            "text": "final/congrats.md"
         }
     },
-    "steps" : [
-        {
-            "title": "Play with kubectl",
-            "text": "setup/kubectl.md"
-        }
-    ],
-    "finish":{
-        "text": "final/congrats.md"
-    },
-    "backend":{
-        "imageid": "kubernetes-kubeadm-1node-rapid"
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node"
     }
 }
