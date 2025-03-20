@@ -16,19 +16,19 @@ Check if our control tool is installed:
 
 ```
 kubectl version
-```{exec}
+```{{exec}}
 
 ### helm
 Check if our deployment tool is installed:
 
 ```
 helm version
-```{exec}
+```{{exec}}
 
 ### k9s
 Check if our vision tool is installed:
 
 ```
 k9s version
-```{exec}
+```{{exec}}
 
