@@ -13,10 +13,22 @@ To simplify installation of all tools, we are going to use `arkade`. It is a kin
 we already installed the tools for you, so, let's check if them exist in your environment.
 ### kubectl
 Check if our control tool is installed:
-```kubectl version```{exec}
+
+```
+kubectl version
+```{exec}
+
 ### helm
 Check if our deployment tool is installed:
-```helm version```{exec}
+
+```
+helm version
+```{exec}
+
 ### k9s
 Check if our vision tool is installed:
-```k9s version```{exec}
+
+```
+k9s version
+```{exec}
+
