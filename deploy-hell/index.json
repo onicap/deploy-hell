@@ -22,6 +22,7 @@
         "assets": {
             "host01": [
               {"file": "app/*.*", "target":"/app"},
+              {"file": "*", "target":"/app"},
               {"file": "conf.yaml", "target": "~/app", "chmod": "+w"}
             ]
         }
