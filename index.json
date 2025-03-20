@@ -1,0 +1,21 @@
+{
+    "title":"Deployment hell",
+    "description": "Use a simple 3-tier application to learn about kube, helm and k9s",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps" : [
+            {
+                "title": "Play with kubectl",
+                "text": "setup/kubectl.md"
+            }
+        ],
+        "finish": {
+            "text": "final/congrats.md"
+        }
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node"
+    }
+}
