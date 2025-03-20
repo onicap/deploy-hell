@@ -10,7 +10,14 @@ how all parts, system and code connect with our beatifuls apps and how to troubl
 
 ## Manager tool
 To simplify installation of all tools, we are going to use `arkade`. It is a kind of marketplace for kubernetes, but don't worry
-we already installed the tools for you, so, let's check if them exist in your environment.
+we already installed the tools for you, so, let's check if them exist in your environment. Activate the tools with path modification:
+
+```
+export PATH=$PATH:$HOME/.arkade/bin/
+```{{exec}}
+
+This command allow us to see our installed tools.
+
 ### kubectl
 Check if our control tool is installed:
 
