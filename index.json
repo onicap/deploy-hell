@@ -1,0 +1,11 @@
+{
+    "title":"Deployment hell",
+    "details":{
+        "intro": {
+            "text": "intro.md"
+        }
+    },
+    "backend":{
+        "imageid": "kubernetes-kubeadm-1node-rapid"
+    }
+}
