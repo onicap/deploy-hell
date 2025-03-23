@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "two.fullname" . }}
+  labels:
+    {{- include "two.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.two.autoscaling.enabled }}
+  replicas: {{ .Values.two.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "two.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.two.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "two.labels" . | nindent 8 }}
+        {{- with .Values.two.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      {{- with .Values.two.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "two.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.two.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.two.securityContext | nindent 12 }}
+          image: "{{ .Values.two.image.repository }}:{{ .Values.two.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.two.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.two.service.port }}
+              protocol: TCP
+          livenessProbe:
+            {{- toYaml .Values.two.livenessProbe | nindent 12 }}
+          readinessProbe:
+            {{- toYaml .Values.two.readinessProbe | nindent 12 }}
+          resources:
+            {{- toYaml .Values.two.resources | nindent 12 }}
+          {{- with .Values.two.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+      {{- with .Values.two.volumes }}
+      volumes:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.two.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.two.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.two.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
