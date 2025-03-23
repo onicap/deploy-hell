@@ -49,7 +49,7 @@
         },
         "assets": {
             "host01": [
-              {"file": "app/*", "target":"/app"}
+              {"file": "charts/*", "target":"~/charts"}
             ]
         }
     },
