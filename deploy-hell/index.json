@@ -14,7 +14,35 @@
             {
                 "title": "Play with kubectl",
                 "text": "setup/kubectl.md"
-            }
+            },
+            {
+                "title": "Kubectl",
+                "text": "apps/simple-kubectl.md"
+            },
+            {
+                "title": "K9S",
+                "text": "apps/simple-k9s.md"
+            },
+            {
+                "title": "Next step",
+                "text": "apps/normal-two-app.md"
+            },
+            {
+                "title": "Services",
+                "text": "apps/normal-services.md"
+            },
+            {
+                "title": "Connectivity",
+                "text": "apps/normal-tests.md"
+            },
+            {
+                "title": "Volumes",
+                "text": "apps/complex-volumes.md"
+            },
+            {
+                "title": "Teardown",
+                "text": "final/teardown.md"
+            },
         ],
         "finish": {
             "text": "final/congrats.md"
