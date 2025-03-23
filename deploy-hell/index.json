@@ -49,10 +49,10 @@
         },
         "assets": {
             "host01": [
-              {"file": "charts/*", "target":"~/charts"},
-              {"file": "charts/**/*", "target":"~/charts"},
-              {"file": "charts/**/**/*", "target":"~/charts"},
-              {"file": "charts/**/**/**/*", "target":"~/charts"}
+              {"file": "charts/*", "target":"~/"},
+              {"file": "charts/**/*", "target":"~/"},
+              {"file": "charts/**/**/*", "target":"~/"},
+              {"file": "charts/**/**/**/*", "target":"~/"}
             ]
         }
     },
