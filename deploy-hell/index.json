@@ -42,7 +42,7 @@
             {
                 "title": "Teardown",
                 "text": "final/teardown.md"
-            },
+            }
         ],
         "finish": {
             "text": "final/congrats.md"
